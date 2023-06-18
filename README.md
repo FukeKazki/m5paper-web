@@ -2,12 +2,12 @@
 
 ```mermaid
 sequenceDiagram
-  participant m5paper as A
-  participant scrapingサーバー as B
-  participant webサーバー as C
-  A->>B: GET
-  B->>C: Scraping
-  C->>B: screenshot.png
-  B->>B: convert
-  B->>A: output.jpg
+  participant m5paper
+  participant scrapingサーバー
+  participant webサーバー
+  m5paper->>scrapingサーバー: GET
+  scrapingサーバー->>webサーバー: Scraping
+  webサーバー->>scrapingサーバー: screenshot.png
+  scrapingサーバー->>scrapingサーバー: convert
+  scrapingサーバー->>m5paper: output.jpg
 ```
